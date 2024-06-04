@@ -7,6 +7,7 @@ import {
     Button,
     Grid
 } from "@mui/material";
+import Link from "next/link";
 
 
 
@@ -17,22 +18,26 @@ const Courses = () =>{
         {
             title : "Reactjs",
             price : "3000",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum."
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum.",
+            link : "courses/react"
         },
         {
             title : "Nextjs",
             price : "2500",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum."
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum.",
+            link : "courses/next"
         },
         {
             title : "Javascript",
             price : "6000",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum."
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum.",
+            link : "courses/javascript"
         },
         {
             title : "Basics",
             price : "3000",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum."
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum.",
+            link : "courses/basics"
         }
     ]
 
@@ -53,8 +58,9 @@ const Courses = () =>{
                             </Typography>
                         </CardContent>
                         <CardActions>
+                            <Link href={item.link}>
                             <Button variant="outlined">Syllabus</Button>
-                            <Button size="small">Learn More</Button>
+                            </Link>
                         </CardActions>
                     </Card>
                 </Grid>

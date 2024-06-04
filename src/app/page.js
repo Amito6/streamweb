@@ -1,12 +1,13 @@
-import Navbar from "../../cmp/Navbar/Navbar";
+import Layout from "../../cmp/Layout/Layout";
 
 
 
 const Page = () =>{
   const design = (
     <>
-    <Navbar />
-    <h1>First App</h1>
+    <Layout>
+      <h1>First-App</h1>
+    </Layout>
     </>
   );
   return design;

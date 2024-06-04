@@ -1,13 +1,14 @@
 import Courses from "../../../cmp/Courses/Courses";
-import Navbar from "../../../cmp/Navbar/navbar";
+import Layout from "../../../cmp/Layout/Layout";
 
 
 
 const Page = () =>{
     const design = (
       <>
-        <Navbar />
+      <Layout>
         <Courses />
+      </Layout>
       </>
     );
     return design;
