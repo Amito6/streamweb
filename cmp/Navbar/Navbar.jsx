@@ -1,3 +1,5 @@
+"use client"
+
 import { 
     AppBar,
     Toolbar,
@@ -7,10 +9,14 @@ import {
 
  import Link from "next/link";
 
-
+import { usePathname } from "next/navigation";
 
 
 const Navbar = () =>{
+
+    const pathName = usePathname();
+    console.log(pathName);
+
     const design = (
       <>
         <AppBar position="static">
@@ -20,16 +26,19 @@ const Navbar = () =>{
                 </Toolbar>
                 <Stack direction="row">
                     <Toolbar>
-                        <Link href="/">Home</Link>
+                        <Link href="/" className={pathName === "/" ? "bg-danger p-3 px-3" : ""}>Home</Link>
                     </Toolbar>
                     <Toolbar>
-                        <Link href="/courses">Courses</Link>
+                        <Link href="/courses"
+                        className={pathName === "/courses" ? "bg-danger p-3 px-3" : ""}>Courses</Link>
                     </Toolbar>
                     <Toolbar>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/blog"
+                        className={pathName === "/blog" ? "bg-danger p-3 px-3" : ""}>Blog</Link>
                     </Toolbar>
                     <Toolbar>
-                        <Link href="/login">Login</Link>
+                        <Link href="/login"
+                         className={pathName === "/login" ? "bg-danger p-3 px-3" : ""}>Login</Link>
                     </Toolbar>
                 </Stack>
             </Stack>
